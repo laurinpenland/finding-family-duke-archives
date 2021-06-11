@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Laurin Penland created this website for people who are searching for traces of their ancestors in archives."/>
+<title>Finding Family in Archives at Duke</title>
+<link href="styles/stylesheet3.css" type="text/css" rel="stylesheet" />
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+</head>
+
+<body>
+
+<!--    Made by Erik Terwan    -->
+<!--   24th of November 2015   -->
+<!--        MIT License        -->
+<nav role="navigation">
+  <div id="menuToggle">
+    <!--
+		    A fake / hidden checkbox is used as click reciever,
+		    so you can use the :checked selector on it.
+		    -->
+    <input type="checkbox" />
+
+    <!--
+		    Some spans to act as a hamburger.
+
+		    They are acting like a real hamburger,
+		    not that McDonalds stuff.
+		    -->
+    <span></span> <span></span> <span></span>
+
+    <!--
+		    Too bad the menu has to be inside of the button
+		    but hey, it's pure CSS magic.
+		    -->
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <!--https://codepen.io/andornagy/pen/RNeydj?editors=1100-->
+            <label for="drop-1" class="drop-down-toggle">Searching tips&#9660;</label>
+            <input type="checkbox" id="drop-1"/>
+            <ul class="drop-down-ul">
+              <li><a href="begin.html">Basic search</a></li>
+              <li><a href="names.html">Using names</a></li>
+              <li><a href="enslavedancestors.html">Enslaved ancestors</a></li>
+              <li><a href="dukeAlumni.html">Duke alum and staff</a></li>
+            </ul>
+          </li>
+          <li><a href="diyarchive.html">DIY Archive</a></li>
+          <li><a class = "you_are_here" href="about.html">About</a></li>
+        </ul>
+  </div>
+</nav>
+<header>
+  <h1>Finding <span class="fancy">Family</span> in Archives at <span class="fancy">Duke</span></h1>
+  <img class="img_center" src="images/horiz_border.png" alt="black stamp mark across page">
+</header>
+  <div class = "main_content">
+  <aside>
+  <figure><img src="images/laurin_small.jpg" alt="laurin with her dog on a front porch" class = "img_grid" alt="large question mark with words associated with ancestors">
+    <figcaption>Laurin and Frankie. Photograph by Rebecca Mendelson.</figcaption>
+  </figure>
+</aside>
+  <article>
+  <h2>Archives for the people</h2>
+  <div class="article_content">
+    <p class="paragraph1">Laurin Penland created this website for people who are interested in their ancestors and the stories that can be found amongst old papers, photographs, letters, oral histories, and movies.</p>
+
+    <p>Penland currently works as a library assistant at the David M. Rubenstein Rare Book & Manuscript Library and was first drawn to the library by a <a href="https://find.library.duke.edu/catalog/DUKE003789049">collection of photographs by Rob Amberg</a>, who has been documenting Penland's hometown in Appalachia for more than 40 years.</p>
+    <form action="#" method="post">
+      <fieldset>
+        <legend><a name="contact"></a>Contact</legend>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname" required>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="comments">Comments:</label>
+        <textarea name="comments" id="comments"></textarea>
+        <input type="submit" name="submit" value="Submit">
+      </fieldset>
+    </form>
+  </div>
+</article>
+</div>
+<!--<aside>
+  <h3 id="links">Helpful Links</h3>
+  <ul id="aside_list">
+    <li><a href="https://library.duke.edu/rubenstein">David M. Rubenstein Rare Book & Manuscript Library</a></li>
+    <li><a href="https://library.duke.edu/using/catalog-search-tips/expert">Expert searching in the catalog</a></li>
+    <li><a href="https://library.duke.edu/rubenstein/research/readingroom">Before visiting the library</a></li>
+  </ul>
+</aside>-->
+<footer>
+  <p>&copy; Laurin Penland, <a href="#contact">Contact</a></p>
+</footer>
+</body>
+</html>

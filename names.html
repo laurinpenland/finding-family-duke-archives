@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tips for searching for relatives by name and for searching for hard-to-find female relatives."/>
+<title>Finding Family in Archives at Duke</title>
+<link href="styles/stylesheet3.css" type="text/css" rel="stylesheet" />
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+</head>
+
+<body>
+
+<!--    Made by Erik Terwan    -->
+<!--   24th of November 2015   -->
+<!--        MIT License        -->
+<nav role="navigation">
+  <div id="menuToggle">
+    <!--
+		    A fake / hidden checkbox is used as click reciever,
+		    so you can use the :checked selector on it.
+		    -->
+    <input type="checkbox" />
+
+    <!--
+		    Some spans to act as a hamburger.
+
+		    They are acting like a real hamburger,
+		    not that McDonalds stuff.
+		    -->
+    <span></span> <span></span> <span></span>
+
+    <!--
+		    Too bad the menu has to be inside of the button
+		    but hey, it's pure CSS magic.
+		    -->
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <!--https://codepen.io/andornagy/pen/RNeydj?editors=1100-->
+            <label for="drop-1" class="drop-down-toggle">Searching tips&#9660;</label>
+            <input type="checkbox" id="drop-1"/>
+            <ul class="drop-down-ul">
+              <li><a href="begin.html">Basic search</a></li>
+              <li><a class = "you_are_here" href="names.html">Using names</a></li>
+              <li><a href="enslavedancestors.html">Enslaved ancestors</a></li>
+              <li><a href="dukeAlumni.html">Duke alum and staff</a></li>
+            </ul>
+          </li>
+          <li><a href="diyarchive.html">DIY Archive</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+  </div>
+</nav>
+<header>
+  <h1>Finding <span class="fancy">Family</span> in Archives at <span class="fancy">Duke</span></h1>
+  <img class="img_center" src="images/horiz_border.png" alt="black stamp mark across page">
+</header>
+  <div class = "main_content">
+  <aside>
+  <figure> <img class = "img_grid" src="images/ancestor_word_cloud.png" alt="19th century black and white portraits">
+    <figcaption>Word cloud about ancestors, created by Laurin Penland.</figcaption>
+  </figure>
+  </aside>
+  <article>
+  <h2>Searching for names</h2>
+  <div class="article_content">
+    <ol>
+      <li>If your relative has a popular name like John Smith, you can narrow your search by first searching for "Smith, John" and then adjusting the facets on the left-hand side of the catalog. In this example, I limited the results to show materials that are between 1800-1900 and are related to West Virginia.
+        <figure><img src="images/RLscreenshotcatalog5_small.png" alt="catalog search showing facets"/></figure>
+      </li>
+      <li>If you're searching the collection guides instead of the catalog, you might try searching for the name in both orders. So, for example, I would first search for "Laurin Penland" and then try again by searching for "Penland, Laurin".</li>
+      <li>If your relative was or is a woman, you may find that your search is more difficult or even impossible (due to centuries of patriarchy and sexism). You can try searching for their maiden names or married names. Sometimes married women were referred to by their husband's names (e.g. "Mrs. John Smith") or even just as their wife or widow. This means that it might be easier to search for materials by the names of male members of the family. Sometimes you may find that the materials include information about female family members even though their names are not mentioned in the catalog records.
+        <figure><img src="images/widow.png" alt="title page that says 'By his widow'"/></figure>
+      </li>
+    </ol>
+  </div>
+</article>
+</div>
+<footer>
+  <p>&copy; Laurin Penland, <a href="about.html#contact">Contact</a></p>
+</footer>
+</body>
+</html>

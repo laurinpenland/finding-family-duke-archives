@@ -1,0 +1,665 @@
+/*style3
+
+/* Eric Meyer CSS reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, textarea, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*-----------end of Eric Meyer CSS reset-------------*/
+
+/*-------------body, grid, main_content-------------*/
+html {
+  box-sizing: border-box;
+}
+* {
+  box-sizing: inherit;
+}
+@supports (display: grid) {
+  body {
+    background-attachment: fixed;
+    background-image: url("../images/paper_small.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    font-family: bookman old style, lucida grande, tahoma, sans-serif;
+    grid-template-rows: 60px [header-start] 1fr [content-start] auto [footer-start] 60px;
+    grid-template-areas:
+    "nav"
+    "h1"
+    "content"
+    "foot";
+    line-height: 1.5em;
+  }
+}
+
+@supports (display: grid) {
+  .main_content {
+  display: grid;
+  grid-area: content;
+  grid-template-columns: [photo-left] 40% [text-right] 60%;
+  grid-template-areas:
+  "photo-left text-right";
+  margin-right: 40px;
+  margin-left: 40px;
+  }
+}
+
+/*---------------text, headlines, links-----------------*/
+
+h1 {
+  color: #525151;
+  font-family: Book Antiqua, lucida grande, tahoma, sans-serif;
+  font-size: 55px;
+  line-height: 1em;
+  padding: 1em;
+  text-align: center;
+}
+.fancy {
+  display: inline;
+  font-family: Edwardian Script ITC, lucida grande, tahoma, sans-serif;
+  font-size: 70px;
+}
+h2 {
+  color: rgb(10, 14, 108);
+  color: rgba(10, 14, 108, .7);
+  font-family: Georgia, lucida grande, tahoma, sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1em;
+  margin-left: 2em;
+  padding: 10px;
+  text-align: left;
+}
+h3 {
+  color: rgb(10, 14, 108);
+  color: rgba(10, 14, 108, .7);
+  font-family: Georgia, lucida grande, tahoma, sans-serif;
+  font-size: 26px;
+  line-height: 1em;
+  padding: 0 0 10px 0;
+}
+p {
+  margin: 10px;
+}
+.paragraph1::first-letter {
+  color: #425b66;
+  font-size: 200%;
+  letter-spacing: .05em;
+}
+
+a {
+  color: rgb(10, 14, 108);
+  color: rgba(10, 14, 108, .8);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.caption-link {
+  color: rgb(237,234,234);
+  color: rgba(237,234,234, .7);
+}
+
+/*---------------------header and navigation-------------*/
+header {
+  grid-area: h1;
+  padding: 10px;
+}
+
+nav {
+  background-color: rgb(198, 196, 199);
+  background-color: rgba(198, 196, 199, .9);
+  grid-area: nav;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+nav ul li a:link, nav ul li a:visited {
+  color: #525151;
+  text-decoration: none;
+}
+
+nav ul li a:focus, nav ul li a:hover, nav ul li a:active {
+  color: rgb(10, 14, 108);
+  color: rgba(10, 14, 108, .6);
+  text-decoration: overline;
+  text-decoration-thickness: 0.2em;
+}
+
+.you_are_here:link, .you_are_here:visited {
+  color: #608E95;
+  text-decoration: underline;
+  text-decoration-thickness: 0.2em;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  margin: 10px;
+  padding: 0;
+}
+
+nav ul li {
+  flex: 1 1 auto;
+  font-family: Bookman Old Style, lucida grande, tahoma, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+nav ul li a {
+  display: inline-block;
+  margin-left: 20px;
+  padding: .5em 1em;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/*drop-down nav menu*/
+/*#drop-1 {
+  display: block;
+}*/
+.drop-down-ul {
+  display:none;
+}
+.drop-down-toggle {
+  color: #525151;
+  display: block;
+  margin-top: 8.5px;
+  position: relative;
+  top: 2px;
+}
+nav ul li:hover > ul {
+  display: inherit;
+  background-color: rgb(198, 196, 199);
+  /*background-color: rgba(198, 196, 199, .9);*/
+}
+.drop-down-ul >li {
+  text-transform: none;
+}
+/*.down-arrow {
+  font-size: 2em;
+}*/
+
+
+
+/*--------------list-----------------*/
+ol {
+  counter-reset: li;
+  list-style-type: none;
+}
+
+ol > li::before {
+  color: rgb(10, 14, 108);
+  color: rgba(10, 14, 108, .7);
+  content: counter(li);
+  display: inline-block;
+  font-size: 3em;
+  font-weight: bold;
+  margin-left: 1em;
+  width: 1em;
+
+}
+
+ol > li {
+  counter-increment: li;
+  list-style: none !important;
+  margin: 1em;
+}
+
+article {
+  background-color: rgb(211, 215, 211);
+  background-color: rgba(211, 215, 211, .8);
+  border-radius: 25px;
+  grid-area: text-right;
+  margin: 20px;
+  padding: 30px;
+  position: relative;
+}
+
+.article_content {
+  border: 2px dotted;
+  border-color: rgb(10, 14, 108);
+  border-color: rgba(10, 14, 108, .7);
+  border-radius: 10px;
+  margin: 10px auto;
+  max-width: 30em;
+  padding: 15px;
+}
+
+
+
+/*---------------images------------------*/
+img {
+  margin: 20px auto;
+  width: 100%;
+
+}
+
+.img_center {
+  margin: 5px auto;
+}
+
+figcaption {
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+/*need to figure out what is going on with the img class*/
+/*.figure_grid > */img {
+  display: inline-block;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
+
+
+}
+
+/*------------aside-------------*/
+
+aside {
+  align-self: start;
+  background-color: rgb(10, 14, 108);
+  background-color: rgba(10, 14, 108, .7);
+  border-radius: 25px;
+  color: rgb(237, 234, 234);
+  color: rgba(237, 234, 234, .9);
+  font-family: Georgia, lucida grande, tahoma, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  grid-area: photo-left;
+  margin: 20px 0 20px 20px;
+  padding: 20px;
+  position: sticky;
+  top: 70px;
+}
+aside > ul > li {
+  margin-left: 10px;
+}
+aside > ul > li > a {
+  color: rgb(237, 234, 234);
+  color: rgba(237, 234, 234, .9);
+  text-decoration: none;
+}
+aside > ul > li > a:hover {
+  text-decoration: underline;
+}
+#aside_list {
+  list-style-type: square;
+  padding: 10px;
+}
+
+/*--------------footer--------------*/
+
+footer {
+  background-color: rgb(78, 130, 139);
+  background-color: rgba(78, 130, 139, .7);
+  color: rgb(237, 234, 234);
+  font-family: Georgia, lucida grande, tahoma, sans-serif;
+  grid-area: foot;
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+footer > p {
+  margin: 5px auto;
+  text-align: center;
+}
+
+/*---------------form---------------*/
+input, textarea {
+  border-color: #425b66;
+  border-radius: 4px;
+  border-style: none none solid none;
+  display: block;
+  font-size: 16px;
+  margin: 5px;
+}
+textarea {
+  border-bottom: 2px solid #425b66;
+  width: 224px;
+}
+input[type="submit"] {
+  background-color: #425b66;
+  border: 2px;
+  border-radius: 15px;
+  color: #fafafa;
+  font-size: 16px;
+  margin: 10px;
+  padding: 10px;
+}
+input[type="submit"]:hover {
+  background-color: #fafafa;
+  color: #425b66;
+}
+input[type="submit"]:active {
+  background-color: rgb(10, 14, 108);
+  background-color: rgba(10, 14, 108, .7);
+}
+
+fieldset {
+  border: 4px dotted;
+  border-color: #425b66;
+  border-radius: 25px;
+  color: #425b66;
+  font-family: Georgia, lucida grande, tahoma, sans-serif;
+  margin-left: 20px;
+  max-width: 350px;
+  min-width: 200px;
+  padding: 20px;
+}
+legend {
+  background-color: #fafafa;
+  border-radius: 25px;
+  font-size: 18px;
+  padding: 5px;
+}
+
+/*--------------------media queries---------------------*/
+
+@media only screen and (max-width: 1200px) {
+  ol, h3, fieldset {
+    margin: 20px 20%;
+  }
+  h2, figcaption, p, ol {
+    margin: 10px 10%;
+  }
+  .article_content {
+    padding: 5px;
+  }
+  nav ul li {
+    font-size: 14px;
+    margin: 3px;
+  }
+  nav ul li a {
+    padding: 10px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  .fancy {
+    font-size: 55px;
+  }
+
+  input, textarea {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  body {
+    display: block;
+    margin: 10px 5%;
+    padding: 0;
+  }
+  .main_content {
+    display: block;
+  }
+  article {
+    display: block;
+  }
+  article, aside {
+    margin: 10px 5%;
+    padding: 20px;
+  }
+  aside {
+    position: static;
+  }
+  article > ol, article > p {
+    margin: 10px 10%;
+  }
+/*fix footer */
+  footer {
+    margin-left: -5%;
+    margin-top: 10px;
+    padding: 5px;
+    width: 110%;
+  }
+  h1 {
+    display: inline;
+    float: right;
+    font-size: 20px;
+    line-height: 1em;
+    padding: 1em;
+  }
+  .fancy {
+    font-family: Book Antiqua, lucida grande, tahoma, sans-serif;
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  .special_text {
+    font-size: 14px;
+  }
+  img {
+    margin: auto;
+  }
+  figcaption {
+    font-size: 14px;
+  }
+  ol > li::before {
+    font-size: 2em;
+  }
+  ol {
+    margin: 5px auto;
+  }
+  fieldset {
+    border: 2px solid;
+    margin: 10px auto;
+    padding: 2px;
+  }
+  nav {
+    background-color: transparent;
+  }
+
+  /*
+	* Made by Erik Terwan
+	* 24th of November 2015
+	* MIT License
+	*
+	*
+	* If you are thinking of using this in
+	* production code, beware of the browser
+	* prefixes.
+	*/
+  nav ul {
+    flex-direction: column;
+    flex-wrap: none;
+  }
+  #menuToggle {
+    display: block;
+    position: relative;
+    top: 15px;
+    left: -10px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  #menuToggle a {
+    color: #525151;
+    transition: color 0.3s ease;
+  }
+  #menuToggle a:hover {
+    color: rgb(10, 14, 108);
+    color: rgba(10, 14, 108, .7);
+  }
+  .you_are_here:link, .you_are_here:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 0.2em;
+    color: #6B680A;
+  }
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    float: right;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+
+
+
+
+
+  /*
+	* Just a quick hamburger
+	*/
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cdcdcd;
+    background: rgba(10, 14, 108, .7);
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+  }
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+  /*
+	* Transform all the slices of hamburger
+	* into a crossmark.
+	*/
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+
+  /*
+	* But let's hide the middle one.
+	*/
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+	* Ohyeah and the last one should go the other direction
+	*/
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  /*
+	* Make this absolute positioned
+	* at the top left of the screen
+	*/
+  #menu {
+    position: absolute;
+    width: 325px;
+    /*min-height: 500px;*/
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding: 40px;
+    padding-top: 125px;
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  }
+  #menu li {
+    padding: 0 0;
+    font-size: 18px;
+  }
+  /*
+	* And let's slide it in from the left
+	*/
+  #menuToggle input:checked ~ ul {
+    transform: none;
+  }
+
+
+  /*drop-down nav*/
+  .drop-down-ul>li>a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 0.2em;
+  }
+  nav ul li:hover > ul {
+    display: none;
+  }
+  .drop-down-ul>li {
+    background: #ededed;
+    margin: 0;
+  }
+  nav ul li ul {
+    background-color: transparent;
+  }
+  .drop-down-ul {
+    /*background-color: white;*/
+    margin-left: 20px;
+  }
+  .drop-down-toggle {
+    margin-left: 20px;
+    padding: 10px;
+  }
+  #drop-1:checked + ul {
+    display: block;
+  }
+  #drop-1 {
+    position: fixed;
+    top: 100px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .main_content {
+    margin: 10px 5%;
+  }
+}

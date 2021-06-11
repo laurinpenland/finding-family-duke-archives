@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Find family connections to Duke by searching for staff, faculty, and students in the archives."/>
+<title>Finding Family in Archives at Duke</title>
+<link href="styles/stylesheet3.css" type="text/css" rel="stylesheet" />
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+</head>
+
+<body>
+
+<!--    Made by Erik Terwan    -->
+<!--   24th of November 2015   -->
+<!--        MIT License        -->
+<nav role="navigation">
+  <div id="menuToggle">
+    <!--
+		A fake / hidden checkbox is used as click reciever,
+		so you can use the :checked selector on it.
+		-->
+    <input type="checkbox" />
+
+    <!--
+		Some spans to act as a hamburger.
+
+		They are acting like a real hamburger,
+		not that McDonalds stuff.
+		-->
+    <span></span> <span></span> <span></span>
+
+    <!--
+		Too bad the menu has to be inside of the button
+		but hey, it's pure CSS magic.
+		-->
+    <ul id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <!--https://codepen.io/andornagy/pen/RNeydj?editors=1100-->
+        <label for="drop-1" class="drop-down-toggle">Searching tips&#9660;</label>
+        <input type="checkbox" id="drop-1"/>
+        <ul class="drop-down-ul">
+          <li><a href="begin.html">Basic search</a></li>
+          <li><a href="names.html">Using names</a></li>
+          <li><a href="enslavedancestors.html">Enslaved ancestors</a></li>
+          <li><a class = "you_are_here" href="dukeAlumni.html">Duke alum and staff</a></li>
+        </ul>
+      </li>
+      <li><a href="diyarchive.html">DIY Archive</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </div>
+</nav>
+<header>
+  <h1>Finding <span class="fancy">Family</span> in Archives at <span class="fancy">Duke</span></h1>
+  <img class="img_center" src="images/horiz_border.png" alt="black stamp mark across page">
+</header>
+  <div class = "main_content">
+  <aside>
+  <figure>
+    <img src= "images/chanticleerseria1928duke_0174.jpg" alt="photos and sketch of glee club members"/>
+    <figcaption>Page from the <a class="caption-link" href="https://archive.org/details/chanticleerseria1928duke">Chanticleer Yearbook, 1928,</a> which has been digitized by University Archives at the David M. Rubenstein Libray.</figcaption>
+  </figure>
+</aside>
+
+  <article>
+  <h2>Searching for Duke alumni and staff</h2>
+  <div class="article_content">
+    <p class="paragraph1">The University Archives at Duke contain many resources for finding family members who attended or worked at Duke. Here are few tips to start your search:</p>
+    <ol>
+      <li>To find past students, try looking at <a href="https://archive.org/details/chanticleerseria1928duke">the digitized yearbooks</a> (<i>Chanticleer</i>), <a href="https://library.duke.edu/digitalcollections/dukechronicle/">the digitized Chronicle</a>, and <a href="https://archives.lib.duke.edu/?f%5Bua_record_group_ssim%5D%5B%5D=31">student group collections</a>. </li>
+      <li>To find past faculty, you could also start your search with <i>Chanticleer</i> and <i>The Duke Chronicle</i>, or just do a simple search for their <a href="names.html">name</a> in the catalog and collection guides. You could also browse the different <a href="https://archives.lib.duke.edu/collections/ua-record-groups">record groups in University Archives</a>. "Record groups" are what they sound like--groups of records. Many different collections have been organized into larger groups so that it is easier to intellectually understand the archives as a whole. In the case of searching for faculty and staff, it may be helpful to browse <a href="https://archives.lib.duke.edu/catalog?f%5Bua_record_group_ssim%5D%5B%5D=29">Papers of Faculty, Staff, and Associates record group</a>.</li>
+      <li>To find family members who worked at Duke as laborers and non-faculty, you will probably have to perform a more thorough search of the archives and you may not find anything at all. Sometimes <i>Chanticleer</i> showed some pictures of these workers (with and without captions). A few projects at Duke have tried to find the names of past workers by going through old account books. Visit the <a href="https://stonebystone.wixsite.com/duke">Stone by Stone website</a> to view a list of workers who built the Duke Chapel.</li>
+    </ol>
+  </div>
+</article>
+</div>
+<footer>
+  <p>&copy; Laurin Penland, <a href="about.html#contact">Contact</a></p>
+</footer>
+</body>
+</html>
