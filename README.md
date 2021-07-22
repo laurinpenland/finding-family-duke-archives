@@ -3,3 +3,10 @@ Date: 6/11/2021
 Purpose:  This website was created as a project for a web development class. It is still a work in  progress. The main goal was to create a site that felt welcoming for people who are interested in doing genealogical research at the Rubenstein Library (at Duke). It is especially meant for people who are new to archives.
 
 View the site here: https://laurinpenland.github.io/finding-family-duke-archives.io/
+
+Things I would like to improve:
+1) Fix fonts in Safari browswer
+2) Fix alignment of navigation menu
+3) Soften transition of drop-down menu on hover
+4) Improve contrast of links in captions
+5) Improve content (proofread for style and substance)
