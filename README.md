@@ -10,3 +10,5 @@ Things I would like to improve:
 3) Soften transition of drop-down menu on hover
 4) Improve contrast of links in captions
 5) Improve content (proofread for style and substance)
+6) Center h2s
+7) Run axe audit
