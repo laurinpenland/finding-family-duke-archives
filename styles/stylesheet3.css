@@ -50,7 +50,7 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     display: grid;
-    font-family: bookman old style, lucida grande, tahoma, sans-serif;
+    font-family: bookman old style, Georgia, lucida grande, tahoma, sans-serif;
     grid-template-rows: 60px [header-start] 1fr [content-start] auto [footer-start] 60px;
     grid-template-areas:
     "nav"
@@ -77,7 +77,7 @@ html {
 
 h1 {
   color: #525151;
-  font-family: Book Antiqua, lucida grande, tahoma, sans-serif;
+  font-family: Book Antiqua, Didot, lucida grande, tahoma, sans-serif;
   font-size: 55px;
   line-height: 1em;
   padding: 1em;
@@ -85,7 +85,7 @@ h1 {
 }
 .fancy {
   display: inline;
-  font-family: Edwardian Script ITC, lucida grande, tahoma, sans-serif;
+  font-family: Edwardian Script ITC, Brush Script MT, lucida grande, tahoma, sans-serif;
   font-size: 70px;
 }
 h2 {
@@ -174,7 +174,7 @@ nav ul {
 
 nav ul li {
   flex: 1 1 auto;
-  font-family: Bookman Old Style, lucida grande, tahoma, sans-serif;
+  font-family: Bookman Old Style, Georgia, lucida grande, tahoma, sans-serif;
   font-size: 14px;
   font-weight: bold;
   letter-spacing: .2em;
@@ -470,7 +470,7 @@ legend {
     padding: 1em;
   }
   .fancy {
-    font-family: Book Antiqua, lucida grande, tahoma, sans-serif;
+    font-family: Book Antiqua, Didot, lucida grande, tahoma, sans-serif;
     font-size: 20px;
   }
   h2 {
