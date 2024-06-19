@@ -10,3 +10,4 @@ Things I would like to improve:
 * Center h2s
 * Run axe audit
 * Make menu fully accessible via keyboard/tab
+* Add form label
