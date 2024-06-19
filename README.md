@@ -5,7 +5,8 @@ Purpose:  This website was created as a project for a web development class. The
 View the site here: https://laurinpenland.github.io/finding-family-duke-archives.io/
 
 Things I would like to improve:
-** Soften transition of drop-down menu on hover
-** Improve contrast of links in captions
-** Center h2s
-** Run axe audit
+* Soften transition of drop-down menu on hover
+* Improve contrast of links in captions
+* Center h2s
+* Run axe audit
+* Make menu fully accessible via keyboard/tab
